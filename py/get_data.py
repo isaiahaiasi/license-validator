@@ -24,8 +24,10 @@ def get_tds(tr):
 
 
 def get_state(tds):
+    state, abbr = get_state_text(tds[3])
     return {
-        'state': get_state_text(tds[3]),
+        'state': state,
+        'abbr': abbr,
         'regexp': get_regex_list(tds[2])
     }
 
@@ -43,7 +45,7 @@ def get_state_text(td):
     full = lis[0]
     # there are bs ones, & order isn't consistent
     abbr = [li for li in lis if len(li) == 2][0]
-    return abbr + " - " + full
+    return full, abbr
 
 
 def save_as_json(data, outputPath):

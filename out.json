@@ -1,1 +1,375 @@
-[{"state": "AL - Alabama", "regexp": ["\\d{7}"]}, {"state": "AK - Alaska", "regexp": ["\\d{7}"]}, {"state": "AZ - Arizona", "regexp": ["[a-zA-Z]\\d{8}", "\\d{9}"]}, {"state": "AR - Arkansas", "regexp": ["9\\d{8}"]}, {"state": "CA - California", "regexp": ["[a-zA-Z]\\d{7}"]}, {"state": "CO - Colorado", "regexp": ["\\d{2}-\\d{3}-\\d{4}"]}, {"state": "CT - Connecticut", "regexp": ["\\d{9}"]}, {"state": "DE - Delaware", "regexp": ["\\d{7}"]}, {"state": "FL - Florida", "regexp": ["[a-zA-Z] \\d{3} \\d{3} \\d{3} \\d{3}", "[a-zA-Z]\\d{12}", "[a-zA-Z]\\d{3}-\\d{3}-\\d{2}-\\d{3}-\\d", "[a-zA-Z]-\\d{3}-\\d{3}-\\d{3}-\\d{3}"]}, {"state": "GA - Georgia", "regexp": ["\\d{9}"]}, {"state": "HI - Hawaii", "regexp": ["[a-zA-Z]\\d{8}"]}, {"state": "ID - Idaho", "regexp": ["[a-zA-Z]{2}\\d{6}[a-zA-Z]"]}, {"state": "IL - Illinois", "regexp": ["[a-zA-Z]\\d{3}-\\d{4}-\\d{4}", "[a-zA-Z]\\d{11}"]}, {"state": "IN - Indiana", "regexp": ["\\d{4}-\\d{2}-\\d{4}"]}, {"state": "IA - Iowa", "regexp": ["\\d{3}[a-zA-Z]{2}\\d{4}", "\\d{9}"]}, {"state": "KS - Kansas", "regexp": ["[a-zA-Z]\\d{2}-\\d{2}-\\d{4}"]}, {"state": "KY - Kentucky", "regexp": ["[a-zA-Z]\\d{2}-\\d{3}-\\d{3}"]}, {"state": "LA - Louisiana", "regexp": ["\\d{9}"]}, {"state": "ME - Maine", "regexp": ["\\d{7}"]}, {"state": "MD - Maryland", "regexp": ["[a-zA-Z]-\\d{3}-\\d{3}-\\d{3}-\\d{3}", "[a-zA-Z]\\d{12}"]}, {"state": "MA - Massachusetts", "regexp": ["[0-9] {9}"]}, {"state": "MI - Michigan", "regexp": ["[a-zA-Z]\\s\\d{3}\\s\\d{3}\\s\\d{3}\\s\\d{3}", "[a-zA-Z]\\d{12}"]}, {"state": "MN - Minnesota", "regexp": ["[a-zA-Z]\\d{12}"]}, {"state": "MS - Mississippi", "regexp": ["\\d{3}-\\d{2}-\\d{4}"]}, {"state": "MO - Missouri", "regexp": ["[a-zA-Z]\\d{9}"]}, {"state": "MT - Montana", "regexp": ["(([0][1-9]|[1][0-2])\\d{3}([1-9][0-9]{3})41([0][1-9]|[1][0-9]|[3][0-1]))", "\\d{9}"]}, {"state": "NE - Nebraska", "regexp": ["[a-zA-Z]\\d{8}"]}, {"state": "NV - Nevada", "regexp": ["\\d{10}"]}, {"state": "NH - New Hampshire", "regexp": ["([0][1-9]|[1][0-2])[a-zA-Z]{3}\\d{2}(0[1-9]|[1-2][0-9]|3[0-1])\\d"]}, {"state": "NJ - New Jersey", "regexp": ["[a-zA-Z]\\d{4} \\d{5} \\d{5}", "[a-zA-Z]\\d{14}"]}, {"state": "NM - New Mexico", "regexp": ["\\d{9}"]}, {"state": "NY - New York", "regexp": ["\\d{3} \\d{3} \\d{3}", "\\d{9}"]}, {"state": "NC - North Carolina", "regexp": ["\\d{12}"]}, {"state": "ND - North Dakota", "regexp": ["[a-zA-Z]{3}-\\d{2}-\\d{4}"]}, {"state": "OH - Ohio", "regexp": ["[a-zA-Z]{1}[0-9]{4,8}", "[a-zA-Z]{2}[0-9]{3,7}", "[0-9]{8}"]}, {"state": "OK - Oklahoma", "regexp": ["[a-zA-Z]\\d{9}"]}, {"state": "OR - Oregon", "regexp": ["\\d{7}"]}, {"state": "PA - Pennsylvania", "regexp": ["\\d{2}\\s\\d{3}\\s\\d{3}"]}, {"state": "RI - Rhode Island", "regexp": ["[1-9]{2}\\d{5}"]}, {"state": "SC - South Carolina", "regexp": ["\\d{9}"]}, {"state": "SD - South Dakota", "regexp": ["\\d{8}"]}, {"state": "TN - Tennessee", "regexp": ["\\d{7,9}"]}, {"state": "TX - Texas", "regexp": ["\\d{8}"]}, {"state": "UT - Utah", "regexp": ["\\d{9}"]}, {"state": "VT - Vermont", "regexp": ["\\d{7}[a-zA-Z]", "\\d{8}"]}, {"state": "VA - Virginia", "regexp": ["[a-zA-Z]\\d{2}-\\d{2}-\\d{4}", "[a-zA-Z]\\d{8}"]}, {"state": "WA - Washington", "regexp": ["[a-zA-Z]{3}\\*\\*[a-zA-Z]{2}\\d{3}[a-zA-Z]\\d"]}, {"state": "DC - DC", "regexp": ["\\d{7}"]}, {"state": "WV - West Virginia", "regexp": ["[a-zA-Z]\\d{6}", "\\d{7}"]}, {"state": "WI - Wisconsin", "regexp": ["[a-zA-Z]\\d{3}-\\d{4}-\\d{4}-\\d{2}"]}, {"state": "WY - Wyoming", "regexp": ["\\d{6}-\\d{3}"]}]
+[
+    {
+        "state": "Alabama",
+        "abbr": "AL",
+        "regexp": [
+            "\\d{7}"
+        ]
+    },
+    {
+        "state": "Alaska",
+        "abbr": "AK",
+        "regexp": [
+            "\\d{7}"
+        ]
+    },
+    {
+        "state": "Arizona",
+        "abbr": "AZ",
+        "regexp": [
+            "[a-zA-Z]\\d{8}",
+            "\\d{9}"
+        ]
+    },
+    {
+        "state": "Arkansas",
+        "abbr": "AR",
+        "regexp": [
+            "9\\d{8}"
+        ]
+    },
+    {
+        "state": "California",
+        "abbr": "CA",
+        "regexp": [
+            "[a-zA-Z]\\d{7}"
+        ]
+    },
+    {
+        "state": "Colorado",
+        "abbr": "CO",
+        "regexp": [
+            "\\d{2}-\\d{3}-\\d{4}"
+        ]
+    },
+    {
+        "state": "Connecticut",
+        "abbr": "CT",
+        "regexp": [
+            "\\d{9}"
+        ]
+    },
+    {
+        "state": "Delaware",
+        "abbr": "DE",
+        "regexp": [
+            "\\d{7}"
+        ]
+    },
+    {
+        "state": "Florida",
+        "abbr": "FL",
+        "regexp": [
+            "[a-zA-Z] \\d{3} \\d{3} \\d{3} \\d{3}",
+            "[a-zA-Z]\\d{12}",
+            "[a-zA-Z]\\d{3}-\\d{3}-\\d{2}-\\d{3}-\\d",
+            "[a-zA-Z]-\\d{3}-\\d{3}-\\d{3}-\\d{3}"
+        ]
+    },
+    {
+        "state": "Georgia",
+        "abbr": "GA",
+        "regexp": [
+            "\\d{9}"
+        ]
+    },
+    {
+        "state": "Hawaii",
+        "abbr": "HI",
+        "regexp": [
+            "[a-zA-Z]\\d{8}"
+        ]
+    },
+    {
+        "state": "Idaho",
+        "abbr": "ID",
+        "regexp": [
+            "[a-zA-Z]{2}\\d{6}[a-zA-Z]"
+        ]
+    },
+    {
+        "state": "Illinois",
+        "abbr": "IL",
+        "regexp": [
+            "[a-zA-Z]\\d{3}-\\d{4}-\\d{4}",
+            "[a-zA-Z]\\d{11}"
+        ]
+    },
+    {
+        "state": "Indiana",
+        "abbr": "IN",
+        "regexp": [
+            "\\d{4}-\\d{2}-\\d{4}"
+        ]
+    },
+    {
+        "state": "Iowa",
+        "abbr": "IA",
+        "regexp": [
+            "\\d{3}[a-zA-Z]{2}\\d{4}",
+            "\\d{9}"
+        ]
+    },
+    {
+        "state": "Kansas",
+        "abbr": "KS",
+        "regexp": [
+            "[a-zA-Z]\\d{2}-\\d{2}-\\d{4}"
+        ]
+    },
+    {
+        "state": "Kentucky",
+        "abbr": "KY",
+        "regexp": [
+            "[a-zA-Z]\\d{2}-\\d{3}-\\d{3}"
+        ]
+    },
+    {
+        "state": "Louisiana",
+        "abbr": "LA",
+        "regexp": [
+            "\\d{9}"
+        ]
+    },
+    {
+        "state": "Maine",
+        "abbr": "ME",
+        "regexp": [
+            "\\d{7}"
+        ]
+    },
+    {
+        "state": "Maryland",
+        "abbr": "MD",
+        "regexp": [
+            "[a-zA-Z]-\\d{3}-\\d{3}-\\d{3}-\\d{3}",
+            "[a-zA-Z]\\d{12}"
+        ]
+    },
+    {
+        "state": "Massachusetts",
+        "abbr": "MA",
+        "regexp": [
+            "[0-9] {9}"
+        ]
+    },
+    {
+        "state": "Michigan",
+        "abbr": "MI",
+        "regexp": [
+            "[a-zA-Z]\\s\\d{3}\\s\\d{3}\\s\\d{3}\\s\\d{3}",
+            "[a-zA-Z]\\d{12}"
+        ]
+    },
+    {
+        "state": "Minnesota",
+        "abbr": "MN",
+        "regexp": [
+            "[a-zA-Z]\\d{12}"
+        ]
+    },
+    {
+        "state": "Mississippi",
+        "abbr": "MS",
+        "regexp": [
+            "\\d{3}-\\d{2}-\\d{4}"
+        ]
+    },
+    {
+        "state": "Missouri",
+        "abbr": "MO",
+        "regexp": [
+            "[a-zA-Z]\\d{9}"
+        ]
+    },
+    {
+        "state": "Montana",
+        "abbr": "MT",
+        "regexp": [
+            "(([0][1-9]|[1][0-2])\\d{3}([1-9][0-9]{3})41([0][1-9]|[1][0-9]|[3][0-1]))",
+            "\\d{9}"
+        ]
+    },
+    {
+        "state": "Nebraska",
+        "abbr": "NE",
+        "regexp": [
+            "[a-zA-Z]\\d{8}"
+        ]
+    },
+    {
+        "state": "Nevada",
+        "abbr": "NV",
+        "regexp": [
+            "\\d{10}"
+        ]
+    },
+    {
+        "state": "New Hampshire",
+        "abbr": "NH",
+        "regexp": [
+            "([0][1-9]|[1][0-2])[a-zA-Z]{3}\\d{2}(0[1-9]|[1-2][0-9]|3[0-1])\\d"
+        ]
+    },
+    {
+        "state": "New Jersey",
+        "abbr": "NJ",
+        "regexp": [
+            "[a-zA-Z]\\d{4} \\d{5} \\d{5}",
+            "[a-zA-Z]\\d{14}"
+        ]
+    },
+    {
+        "state": "New Mexico",
+        "abbr": "NM",
+        "regexp": [
+            "\\d{9}"
+        ]
+    },
+    {
+        "state": "New York",
+        "abbr": "NY",
+        "regexp": [
+            "\\d{3} \\d{3} \\d{3}",
+            "\\d{9}"
+        ]
+    },
+    {
+        "state": "North Carolina",
+        "abbr": "NC",
+        "regexp": [
+            "\\d{12}"
+        ]
+    },
+    {
+        "state": "North Dakota",
+        "abbr": "ND",
+        "regexp": [
+            "[a-zA-Z]{3}-\\d{2}-\\d{4}"
+        ]
+    },
+    {
+        "state": "Ohio",
+        "abbr": "OH",
+        "regexp": [
+            "[a-zA-Z]{1}[0-9]{4,8}",
+            "[a-zA-Z]{2}[0-9]{3,7}",
+            "[0-9]{8}"
+        ]
+    },
+    {
+        "state": "Oklahoma",
+        "abbr": "OK",
+        "regexp": [
+            "[a-zA-Z]\\d{9}"
+        ]
+    },
+    {
+        "state": "Oregon",
+        "abbr": "OR",
+        "regexp": [
+            "\\d{7}"
+        ]
+    },
+    {
+        "state": "Pennsylvania",
+        "abbr": "PA",
+        "regexp": [
+            "\\d{2}\\s\\d{3}\\s\\d{3}"
+        ]
+    },
+    {
+        "state": "Rhode Island",
+        "abbr": "RI",
+        "regexp": [
+            "[1-9]{2}\\d{5}"
+        ]
+    },
+    {
+        "state": "South Carolina",
+        "abbr": "SC",
+        "regexp": [
+            "\\d{9}"
+        ]
+    },
+    {
+        "state": "South Dakota",
+        "abbr": "SD",
+        "regexp": [
+            "\\d{8}"
+        ]
+    },
+    {
+        "state": "Tennessee",
+        "abbr": "TN",
+        "regexp": [
+            "\\d{7,9}"
+        ]
+    },
+    {
+        "state": "Texas",
+        "abbr": "TX",
+        "regexp": [
+            "\\d{8}"
+        ]
+    },
+    {
+        "state": "Utah",
+        "abbr": "UT",
+        "regexp": [
+            "\\d{9}"
+        ]
+    },
+    {
+        "state": "Vermont",
+        "abbr": "VT",
+        "regexp": [
+            "\\d{7}[a-zA-Z]",
+            "\\d{8}"
+        ]
+    },
+    {
+        "state": "Virginia",
+        "abbr": "VA",
+        "regexp": [
+            "[a-zA-Z]\\d{2}-\\d{2}-\\d{4}",
+            "[a-zA-Z]\\d{8}"
+        ]
+    },
+    {
+        "state": "Washington",
+        "abbr": "WA",
+        "regexp": [
+            "[a-zA-Z]{3}\\*\\*[a-zA-Z]{2}\\d{3}[a-zA-Z]\\d"
+        ]
+    },
+    {
+        "state": "DC",
+        "abbr": "DC",
+        "regexp": [
+            "\\d{7}"
+        ]
+    },
+    {
+        "state": "West Virginia",
+        "abbr": "WV",
+        "regexp": [
+            "[a-zA-Z]\\d{6}",
+            "\\d{7}"
+        ]
+    },
+    {
+        "state": "Wisconsin",
+        "abbr": "WI",
+        "regexp": [
+            "[a-zA-Z]\\d{3}-\\d{4}-\\d{4}-\\d{2}"
+        ]
+    },
+    {
+        "state": "Wyoming",
+        "abbr": "WY",
+        "regexp": [
+            "\\d{6}-\\d{3}"
+        ]
+    }
+]

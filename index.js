@@ -1,32 +1,63 @@
-const matches = {
-    // TODO: generate list from
-    // https://success.myshn.net/Policy/Data_Identifiers/U.S._Driver%27s_License_Numbers
-    // in the form of:
-    // "AZ - Arizona": [ reg1, reg2 ]
-    // (this isn't super efficient b/c it means redundant matches, but it IS easy :P)
+let matches = [];
+
+async function setMatchData() {
+  json = await fetch('out.json').then(res => {
+    if (!res.ok) {
+      throw new Error("Error fetching matcher data!");
+    }
+
+    return res.json()
+  });
+
+  matches = json.map(({ state, abbr, regexp }) => {
+    return {
+      state: `${abbr} - ${state}`,
+      regexp: regexp.map(reg => new RegExp(`^${reg}$`))
+    }
+  })
 }
 
 function getMatches(license) {
-    if (license === '') return;
+  if (license === '') return [];
 
+  const validStates = [];
+
+  for (const match of matches) {
+    const { state, regexp } = match;
+    for (const rg of regexp) {
+      if (license.match(rg, 1)) {
+        validStates.push(state);
+      }
+    }
+  }
+
+  return validStates;
 }
 
 function renderList(matches) {
-    const listEle = document.querySelector('#state-list');
+  const listEle = document.querySelector('#state-list');
 
-    for(const match of matches) {
-        const li = document.createElement('li');
-        li.textContent = match;
-        listEle.append(li)
-    }
+  listEle.innerHTML = "";
+
+  for (const match of matches) {
+    const li = document.createElement('li');
+    li.textContent = match;
+    listEle.append(li)
+  }
 }
 
-function setup() {
-    const input = document.querySelector("#dl-number-input");
-    input.addEventListener("onChange", (e) => {
-        const matches = getMatches(e.currentTarget.value);
-        renderList(matches);
-    });
+async function setup() {
+  await setMatchData();
+
+  const input = document.querySelector("#dl-number-input");
+
+  input.addEventListener("input", (e) => {
+    const matches = getMatches(e.currentTarget.value);
+    renderList(matches);
+    if (matches.length === 0) {
+      document.querySelector("#warning").textContent = "Not a valid license number!"
+    }
+  });
 }
 
 setup();
