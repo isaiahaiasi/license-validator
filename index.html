@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>US Driver's License Validator</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="index.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>US Driver's License Validator</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
 </head>
 <body>
-    <h1>US Driver's License Validator</h1>
-    <p1>Enter the driver's license number below, and the states for which the number is valid will be listed</p1>
-    <form>
-        <label for="dl-number">
-            <input type="text" name="dl-number" id="dl-number-input"></input>
-        </label>
-    </form>
-    <p id="warning" class="card warning hidden">Not a valid license number!</p>
-    <ul id="state-list"></ul>
-    <p class="gh-link">
-        <a href="https://github.com/isaiahaiasi/license-validator">
-            See the source on GitHub
-        </a>
-    </p>
+  <h1>US Driver's License Validator</h1>
+  <p>Enter the driver's license number below, and the states for which the number is valid will be listed</p>
+  <p class="small">Based on information collected from
+    <a href="https://success.myshn.net/Policy/Data_Identifiers/U.S._Driver%27s_License_Numbers">
+      this website</a>.
+  </p>
+  <form>
+    <label for="dl-number">
+      <input type="text" name="dl-number" id="dl-number-input"></input>
+    </label>
+  </form>
+  <p id="warning" class="card warning hidden">Not a valid license number!</p>
+  <ul id="state-list"></ul>
+  <p class="gh-link">
+    <a href="https://github.com/isaiahaiasi/license-validator">
+      See the source on GitHub
+    </a>
+  </p>
 </body>
 </html>
