@@ -3,6 +3,10 @@ import requests
 import json
 from unicodedata import normalize
 
+# TODO: update output to be a dict in the form:
+# { regexp1: [ { state, abbr } ] }
+# this way, it's not constantly checking redundant matches
+
 def get_html(path):
     return requests.get(path).text
 

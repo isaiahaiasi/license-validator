@@ -55,7 +55,9 @@ async function setup() {
     const matches = getMatches(e.currentTarget.value);
     renderList(matches);
     if (matches.length === 0) {
-      document.querySelector("#warning").textContent = "Not a valid license number!"
+      document.querySelector("#warning").classList.remove('hidden');
+    } else {
+      document.querySelector("#warning").classList.add('hidden');
     }
   });
 }
