@@ -41,6 +41,7 @@ function renderList(matches) {
 
   for (const match of matches) {
     const li = document.createElement('li');
+    li.classList.add("card");
     li.textContent = match;
     listEle.append(li)
   }
