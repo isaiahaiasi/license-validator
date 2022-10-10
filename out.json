@@ -340,6 +340,7 @@
         "state": "Washington",
         "abbr": "WA",
         "regexp": [
+            "[wW][dD][lL][a-zA-Z0-9]{9}",
             "[a-zA-Z]{3}\\*\\*[a-zA-Z]{2}\\d{3}[a-zA-Z]\\d"
         ]
     },
