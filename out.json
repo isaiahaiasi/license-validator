@@ -114,14 +114,16 @@
         "state": "Kansas",
         "abbr": "KS",
         "regexp": [
-            "[a-zA-Z]\\d{2}-\\d{2}-\\d{4}"
+            "[a-zA-Z]\\d{2}-\\d{2}-\\d{4}",
+            "[a-zA-Z]\\d{8}"
         ]
     },
     {
         "state": "Kentucky",
         "abbr": "KY",
         "regexp": [
-            "[a-zA-Z]\\d{2}-\\d{3}-\\d{3}"
+            "[a-zA-Z]\\d{2}-\\d{3}-\\d{3}",
+            "[a-zA-Z]\\d{8}"
         ]
     },
     {
@@ -172,7 +174,8 @@
         "state": "Mississippi",
         "abbr": "MS",
         "regexp": [
-            "\\d{3}-\\d{2}-\\d{4}"
+            "\\d{3}-\\d{2}-\\d{4}",
+            "\\d{9}"
         ]
     },
     {
@@ -245,7 +248,7 @@
         "state": "North Dakota",
         "abbr": "ND",
         "regexp": [
-            "[a-zA-Z]{3}-\\d{2}-\\d{4}"
+            "[a-zA-Z]{3}-?\\d{2}-?\\d{4}"
         ]
     },
     {
@@ -275,7 +278,8 @@
         "state": "Pennsylvania",
         "abbr": "PA",
         "regexp": [
-            "\\d{2}\\s\\d{3}\\s\\d{3}"
+            "\\d{2}\\s\\d{3}\\s\\d{3}",
+            "\\d{8}"
         ]
     },
     {
@@ -370,7 +374,8 @@
         "state": "Wyoming",
         "abbr": "WY",
         "regexp": [
-            "\\d{6}-\\d{3}"
+            "\\d{6}-\\d{3}",
+            "\\d{9}"
         ]
     }
 ]
