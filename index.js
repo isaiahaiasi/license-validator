@@ -17,7 +17,10 @@ async function setMatchData() {
   })
 }
 
-function getMatches(license) {
+function getMatches(rawLicense) {
+  // Unfortunately, people enter dashes unpredictably, so we just ignore them entirely.
+  const license = rawLicense.replace('-', '');
+
   if (license === '') return [];
 
   const validStates = [];
