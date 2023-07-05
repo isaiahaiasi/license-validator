@@ -1,7 +1,7 @@
 let matches = [];
 
 async function setMatchData() {
-  json = await fetch('out.json').then(res => {
+  json = await fetch('state_regex_data.json').then(res => {
     if (!res.ok) {
       throw new Error("Error fetching matcher data!");
     }
