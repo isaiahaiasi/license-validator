@@ -152,7 +152,7 @@
         "state": "Massachusetts",
         "abbr": "MA",
         "regexp": [
-            "[0-9] {9}"
+            "[sS][a-zA-Z0-9][0-9]{8}"
         ]
     },
     {
