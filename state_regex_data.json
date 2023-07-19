@@ -271,7 +271,8 @@
         "state": "Oregon",
         "abbr": "OR",
         "regexp": [
-            "\\d{7}"
+            "\\d{7}",
+            "[a-zA-Z]\\d{6}"
         ]
     },
     {
