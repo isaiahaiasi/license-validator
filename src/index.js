@@ -1,15 +1,10 @@
+import './styles/index.css';
+import jsonData from './data/state_regex_data.json'
+
 let matches = [];
 
-async function setMatchData() {
-  json = await fetch('state_regex_data.json').then(res => {
-    if (!res.ok) {
-      throw new Error("Error fetching matcher data!");
-    }
-
-    return res.json()
-  });
-
-  matches = json.map(({ state, abbr, regexp }) => {
+async function getMatchdata() {
+  matches = jsonData.map(({state, abbr, regexp}) => {
     return {
       state: `${abbr} - ${state}`,
       regexp: regexp.map(reg => new RegExp(`^${reg}$`))
@@ -26,7 +21,7 @@ function getMatches(rawLicense) {
   const validStates = [];
 
   for (const match of matches) {
-    const { state, regexp } = match;
+    const {state, regexp} = match;
     for (const rg of regexp) {
       if (license.match(rg, 1)) {
         validStates.push(state);
@@ -51,7 +46,7 @@ function renderList(matches) {
 }
 
 async function setup() {
-  await setMatchData();
+  await getMatchdata();
 
   const input = document.querySelector("#dl-number-input");
 
