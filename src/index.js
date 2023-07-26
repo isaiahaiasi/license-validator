@@ -1,10 +1,8 @@
 import './styles/index.css';
 import jsonData from './data/state_regex_data.json'
 
-let matches = [];
-
-async function getMatchdata() {
-  matches = jsonData.map(({state, abbr, regexp}) => {
+function getMatchRegexes() {
+  return jsonData.map(({state, abbr, regexp}) => {
     return {
       state: `${abbr} - ${state}`,
       regexp: regexp.map(reg => new RegExp(`^${reg}$`))
@@ -13,12 +11,15 @@ async function getMatchdata() {
 }
 
 function getMatches(rawLicense) {
-  // Unfortunately, people enter dashes unpredictably, so we just ignore them entirely.
+  // People enter dashes unpredictably, so we just ignore them entirely.
+  // They aren't significant, at least for I-9 verification purposes.
   const license = rawLicense.replace('-', '');
 
   if (license === '') return [];
 
   const validStates = [];
+
+  const matches = getMatchRegexes();
 
   for (const match of matches) {
     const {state, regexp} = match;
@@ -45,14 +46,14 @@ function renderList(matches) {
   }
 }
 
-async function setup() {
-  await getMatchdata();
-
+function setup() {
   const input = document.querySelector("#dl-number-input");
 
   input.addEventListener("input", (e) => {
     const matches = getMatches(e.currentTarget.value);
+
     renderList(matches);
+
     if (matches.length === 0) {
       document.querySelector("#warning").classList.remove('hidden');
     } else {
