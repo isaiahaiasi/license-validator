@@ -40,7 +40,8 @@ h1 {
 
 form {
     display: flex;
-    gap: .25rem;
+    align-items: center;
+    gap: .4rem;
 }
 
 input {
