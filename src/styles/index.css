@@ -38,6 +38,11 @@ h1 {
     font-size: 1.2em;
 }
 
+form {
+    display: flex;
+    gap: .25rem;
+}
+
 input {
     width: 100%;
     font-size: 1em;

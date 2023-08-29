@@ -17,9 +17,17 @@
       this website</a>. Changes have been made to fix some errors and to update some out-of-date matchers.
   </p>
   <form>
-    <label for="dl-number">
-      <input type="text" name="dl-number" id="dl-number-input"></input>
+    <label for="dl-number-input">
+      #
     </label>
+    <input
+        type="text"
+        name="dl-number"
+        id="dl-number-input"
+        title="Enter Driver's License or ID number"
+        placeholder="D-12345678"
+      >
+      </input>
   </form>
   <p id="warning" class="card warning hidden">Not a valid license number!</p>
   <ul id="state-list"></ul>
